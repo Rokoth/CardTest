@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cards</name>
+    </assembly>
+    <members>
+        <member name="M:Cards.Controllers.PackController.Get">
+            <summary>
+            Получить все колоды
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.PackController.GetSorts">
+            <summary>
+            Типы сортировки колод
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.PackController.Get(System.Guid)">
+            <summary>
+            Получить колоду по id
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.PackController.Get(System.String)">
+            <summary>
+            Получить колоду по имени
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.PackController.Post(System.Collections.Generic.Dictionary{System.String,System.Guid})">
+            <summary>
+            Добавить новые колоды. Параметры: набор пар имя колоды и id набора Масти-Значения (типа колоды)
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.PackController.Post(System.Guid,Cards.Services.PackPoolService.Sort,System.Int32)">
+            <summary>
+            Перемешать колоду. 
+            Параметры: id колоды, тип сортировки, 
+            количество перемешиваний (только для симуляции ручного)
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.PackController.Post(System.String,Cards.Services.PackPoolService.Sort,System.Int32)">
+            <summary>
+            Перемешать колоду. 
+            Параметры: имя колоды, тип сортировки, 
+            количество перемешиваний (только для симуляции ручного)
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.PackController.Put(System.Guid,System.String)">
+            <summary>
+            Переименовать колоду. 
+            Параметры: имя колоды, id колоды
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.RangeController.Get">
+            <summary>
+            Получить ранги карт
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.RangeController.Get(System.Guid)">
+            <summary>
+            Получить ранг карт по id
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.RangeController.Post(System.String)">
+            <summary>
+            Добавить ранг карт
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.RangeController.Put(System.Guid,System.String)">
+            <summary>
+            Переименовать ранг карт
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.RangeSetController.Get">
+            <summary>
+            Получить наборы рангов карт
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.RangeSetController.Get(System.Guid)">
+            <summary>
+            Получить набор рангов карт по id
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.RangeSetController.Post(System.String,System.Collections.Generic.Dictionary{System.Guid,System.Int32})">
+            <summary>
+            Добавить набор рангов карт.
+            Параметры: имя набора, старшинство рангов в наборе (набор "id ранга": "значение")
+            При запуске сервиса создаются 2 набора рангов: 9 (с 6 до туза) и 13 (с 2 до туза),
+            отсортированных по возрастанию
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.RangeSetController.Put(System.Guid,System.String)">
+            <summary>
+            Переименовать набор рангов карт.        
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.SuitController.Get">
+            <summary>
+            Получить масти карт
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.SuitController.Get(System.Guid)">
+            <summary>
+            Получить масть карт по id
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.SuitController.Post(System.String)">
+            <summary>
+            Добавить масть карт
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.SuitController.Put(System.Guid,System.String)">
+            <summary>
+            Переименовать масть карт
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.SuitRangeController.Get">
+            <summary>
+            Получить наборы Мастей-Рангов (типы колод)
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.SuitRangeController.Get(System.Guid)">
+            <summary>
+            Получить набор Мастей-Рангов (типа колод) по id
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.SuitRangeController.Post(System.String,System.Guid,System.Guid)">
+            <summary>
+            Добавить набор Мастей-Рангов (типа колод) по id
+            Параметры: имя типа колоды, id набора мастей, id набора рангов
+            При запуске создаются два типа колоды по умолчанию: 36 карт и 52 карты 
+            (старшинство рангов по возрастанию, старшинство мастей не установлено)
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.SuitRangeController.Put(System.Guid,System.String)">
+            <summary>
+            Переименовать набор Мастей-Рангов (типа колод)
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.SuitSetController.Get">
+            <summary>
+            Получить наборы мастей
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.SuitSetController.Get(System.Guid)">
+            <summary>
+            Получить набор мастей по id
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.SuitSetController.Post(System.String,System.Collections.Generic.Dictionary{System.Guid,System.Int32})">
+            <summary>
+            Добавить набор мастей (при запуске сервиса создаётся набор из 4 мастей без старшинства)
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.SuitSetController.Put(System.Guid,System.String)">
+            <summary>
+            Переименовать набор мастей
+            </summary>       
+            <returns></returns>
+        </member>
+    </members>
+</doc>
