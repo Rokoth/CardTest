@@ -58,6 +58,26 @@ namespace Cards.Services
             return null;
         }
 
+        public void DeletePack(Guid id)
+        {
+            lock (PackPool)
+            {
+                var res = PackPool.Find(s => s.Id == id);
+                if(res!=null)
+                    PackPool.Remove(res);
+            }
+        }
+
+        public void DeletePack(string name)
+        {
+            lock (PackPool)
+            {
+                var res = PackPool.Find(s => s.Name == name);
+                if (res != null)
+                    PackPool.Remove(res);
+            }
+        }
+
         public Dictionary<Sort, string> GetSorts()
         {
             return SortView;

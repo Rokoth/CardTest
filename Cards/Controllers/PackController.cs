@@ -152,5 +152,31 @@ namespace Cards.Controllers
             pack.Name = name;
             return Ok(suitRangePoolService.ToDto(pack));
         }
+
+        /// <summary>
+        /// Удалить колоду. 
+        /// Параметры: id колоды
+        /// </summary>       
+        /// <returns></returns>
+        // DELETE api/packs/{id}
+        [HttpPut("{id}")]
+        public ActionResult Delete(Guid id)
+        {            
+            packPoolService.DeletePack(id);            
+            return Ok();
+        }
+
+        /// <summary>
+        /// Удалить колоду. 
+        /// Параметры: имя колоды
+        /// </summary>       
+        /// <returns></returns>
+        // DELETE api/packs/{name}
+        [HttpPut("{name}")]
+        public ActionResult Delete(string name)
+        {
+            packPoolService.DeletePack(name);
+            return Ok();
+        }
     }
 }

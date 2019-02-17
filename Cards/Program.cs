@@ -22,7 +22,7 @@ namespace Cards
             .Enrich.FromLogContext()
             .WriteTo.Console()
             .WriteTo.RollingFile(
-            @"Logs\log-{yyyy-MM-dd}.log",            
+            @"Logs\log.log",            
             fileSizeLimitBytes: 1_000_000, 
             shared: true,
             flushToDiskInterval: TimeSpan.FromSeconds(1))

@@ -57,6 +57,20 @@
             </summary>       
             <returns></returns>
         </member>
+        <member name="M:Cards.Controllers.PackController.Delete(System.Guid)">
+            <summary>
+            Удалить колоду. 
+            Параметры: id колоды
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Cards.Controllers.PackController.Delete(System.String)">
+            <summary>
+            Удалить колоду. 
+            Параметры: имя колоды
+            </summary>       
+            <returns></returns>
+        </member>
         <member name="M:Cards.Controllers.RangeController.Get">
             <summary>
             Получить ранги карт
